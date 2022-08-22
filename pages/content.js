@@ -2,18 +2,23 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTint,
+  faThermometerHalf,
+  faSun,
+} from "@fortawesome/free-solid-svg-icons";
 
-export default function Home() {
+export default function Content() {
   return (
     <>
       <Head>
-        <title>BOTA</title>
+        <title>サボテンセット EA201 - BOTA</title>
       </Head>
-      <div className="top">
+      <div className="content">
         <header className="header partsGrid">
           <nav className="header-nav grid12">
-            <img src="/img/logo-blue.svg" alt="" />
+            <img src="/img/logo-gray.svg" alt="" />
             <ul>
               <li>
                 <Link href="/">
@@ -39,115 +44,69 @@ export default function Home() {
               </a>
             </Link>
           </nav>
-
-          <div className="catch grid12">
-            <h1>ボタニカルライフを楽しもう</h1>
-            <Link href="/">
-              <a>好みの植物を探す</a>
-            </Link>
-          </div>
-
-          <div className="custom-shape-divider-bottom-1661144405">
-            <svg
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 120"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                className="shape-fill"
-              ></path>
-            </svg>
-          </div>
-
         </header>
 
-        <section className="list list-plant partsGrid">
-          <div className="grid12">
-            <h2>好きな植物に囲まれて暮らそう</h2>
-            <p>
-              ふとしたときに目に入る緑のサボテンや、色とりどりの花。好きな植物に囲まれてほっこりボタニカルライフを満喫しませんか？
-            </p>
-            <ul className="grid12 cols-mob2 cols-pc4">
-              <li>
-                <Link href="/">
-                  <a>
-                    <img src="/img/plant.jpg" alt="" />
-                    <h3>観葉植物</h3>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/">
-                  <a>
-                    <img src="/img/plant-bonsai.jpg" alt="" />
-                    <h3>盆栽</h3>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/">
-                  <a>
-                    <img src="/img/plant-preserved.jpg" alt="" />
-                    <h3>プリザーブド</h3>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/">
-                  <a>
-                    <img src="/img/plant-edible.jpg" alt="" />
-                    <h3>食用</h3>
-                  </a>
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </section>
+        <article className="item partsGrid">
+          <figure className="item-photo">
+            <img src="/img/item-ea201.jpg" alt="" />
+          </figure>
 
-        <section className="list list-exp partsGrid">
           <div className="grid12">
-            <h2>身近なところで体験しよう</h2>
-            <p>
-              植物たちとの上手な付き合い方や、活用術、もっと気軽に触れ合う方法を紹介します。サブスクやギフトもご利用ください。
-            </p>
+            <div className="item-body">
+              <h1>サボテンセット EA201</h1>
+              <p>
+                個性豊かな4種類のサボテンをセットにしました。小ぶりなサボテンたちなので、窓際やテーブルに置くのにぴったりです。季節ごとに花を咲かせたり、葉を厚くしたりと楽しませてくれます。
+              </p>
 
-            <ul className="grid12 cols-mob2 cols-pc3">
-              <li>
-                <Link href="/">
-                  <a>
-                    <img src="/img/exp-online.jpg" alt="" />
-                    <h3>オンライン講座</h3>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/">
-                  <a>
-                    <img src="/img/exp-subsc.jpg" alt="" />
-                    <h3>サブスク</h3>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/">
-                  <a>
-                    <img src="/img/exp-gift.jpg" alt="" />
-                    <h3>ギフト</h3>
-                  </a>
-                </Link>
-              </li>
-            </ul>
+              <ul>
+                <li>
+                  <FontAwesomeIcon icon={faTint} className="fas fa-fw" />
+                  <h3>水やり</h3>
+                  <p>
+                    土の表面が乾かない程度に。冬場は月に1回程度で大丈夫です。
+                  </p>
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faThermometerHalf} className="fas fa-fw" />
+                  <h3>温度</h3>
+                  <p>5度以上をキープしてください。</p>
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faSun} className="fas fa-fw" />
+                  <h3>日当たり</h3>
+                  <p>適度に日当たりのいいところにおいてやると◎です。</p>
+                </li>
+              </ul>
+            </div>
+
+            <form className="item-order">
+              <p className="price">
+                7,500円 <span> (税込) </span>
+              </p>
+
+              <label className="qty">
+                数量
+                <select>
+                  <option selected>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </label>
+
+              <button type="submit" className="btn">
+                <FontAwesomeIcon icon={faShoppingCart} className="fas" />
+                カートに入れる
+              </button>
+            </form>
           </div>
-        </section>
+        </article>
 
         <section className="list list-item partsGrid">
           <div className="grid12 frame">
             <h2>人気の植物</h2>
-            <p>
-              オンラインショップで人気の植物たちです。好みのサボテンや花々でお部屋を彩ってみてください。
-            </p>
+
             <ul className="grid12 cols-mob2 cols-pc2">
               <li>
                 <Link href="/">
@@ -161,27 +120,9 @@ export default function Home() {
               <li>
                 <Link href="/">
                   <a>
-                    <img src="/img/item-ea201.jpg" alt="" />
-                    <h3>サボテンセット EA201</h3>
-                    <p>¥7,500</p>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/">
-                  <a>
                     <img src="/img/item-flower.jpg" alt="" />
                     <h3>フラワーポット</h3>
                     <p>¥4,200</p>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/">
-                  <a>
-                    <img src="/img/item-b100.jpg" alt="" />
-                    <h3>サボテン B100</h3>
-                    <p>¥3,600</p>
                   </a>
                 </Link>
               </li>
